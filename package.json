@@ -1,0 +1,11 @@
+{
+  "name": "Cordova-Plugin-Instana",
+  "version": "1.0.0",
+  "cordova": {
+    "id": "Cordova-Plugin-Instana",
+    "platforms": [
+      "android"
+    ]
+  },
+  "description": "Instana Agent for cordova application"
+}
