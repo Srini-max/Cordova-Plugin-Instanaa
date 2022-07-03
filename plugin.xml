@@ -31,7 +31,6 @@
     <source-file src="src/android/Instana.java" target-dir="src/org/apache/cordova" />
     <framework src="com.instana:android-agent-plugin:4.5.1" />
 	<framework src="com.instana:android-agent-runtime:4.5.1"/>
-    <framework src="com.android.support:appcompat-v7:27.0.2" />
   </platform>
 </plugin>
    
