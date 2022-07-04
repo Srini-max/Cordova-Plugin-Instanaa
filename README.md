@@ -13,12 +13,16 @@ Call below function wherever required
 
 ```javascript
 
- Instana.setup('', function(success){
-   console.log('success') 
-}, function(err){
-    console.error(err);
-});
-
+  Instana.initconfig().then(function() {
+      alert("init configuartion- ");
+    }).catch(function(err) {
+      alert("error in init configuartion:- "+err);
+    });
+ Instana.setscreenname('AED').then(function() {
+      alert("screen name captured- ");
+    }).catch(function(err) {
+      alert("error in screen name capture:- "+err);
+    });
 ```
 
 #### Request Failed

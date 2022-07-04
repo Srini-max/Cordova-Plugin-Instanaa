@@ -28,9 +28,19 @@
 		</feature>
     </config-file>
     <config-file parent="/*" target="AndroidManifest.xml"></config-file>
-    <source-file src="src/android/Instana.java" target-dir="src/org/apache/cordova" />
+
+  <platform name="android">
+      <source-file src="src/android/Instana.java" target-dir="src/org/apache/cordova" />
     <framework src="com.instana:android-agent-plugin:4.5.1" />
 	<framework src="com.instana:android-agent-runtime:4.5.1"/>
-  </platform>
+        <hook type="after_prepare" src="scripts/apply-changes.js" />
+        <hook type="before_build" src="scripts/apply-changes.js" />
+        <hook type="after_plugin_install" src="scripts/apply-changes.js" />
+
+        <preference name="ANDROID_SUPPORT_VERSION" default="27.+" />
+
+        <framework src="cordova-android-support-gradle-release.gradle" custom="true" type="gradleReference" />
+
+    </platform>
 </plugin>
    
